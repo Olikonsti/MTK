@@ -2,14 +2,19 @@ import MTK
 
 f = MTK.Window()
 
+d = MTK.Console(minimized=True, disable_exec=True)
 
-y = MTK.Button(f, text="YEET")
+for i in range(100):
+    d.log("YEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEET", color="red")
+
+
+y = MTK.Button(f, text="open console", command=d.show)
 y.pack(padx=100, pady=100)
 
 d = MTK.Scrollframe(f, show_scrollbar=True)
 d.pack()
 
-for i in range(10):
-    MTK.Button(d, text="YEEE").pack(padx=1, pady=1)
+for i in range(50):
+    MTK.Button(d, text="YEEE", command=lambda: MTK.Popup(f)).pack(padx=1, pady=1)
 
 f.mainloop()

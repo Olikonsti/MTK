@@ -88,5 +88,8 @@ class Scrollframe(ttk.Frame):
         canvas.bind('<Enter>', _bind_to_mousewheel)
         canvas.bind('<Leave>', _unbind_from_mousewheel)
 
+    def scroll_to_bottom(self):
+        self.canvas.yview_moveto(1.0)
+
     def pack(self, *args, **kw):
         self.border_frame.pack(*args, **kw)
