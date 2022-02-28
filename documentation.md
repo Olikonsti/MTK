@@ -34,3 +34,5 @@ set disable_exit=True if the user should not be able to execute python code in t
 `console.log(msg, color="white")` show message in log window\
 ``console.hide()`` hide console\
 ``console.show()`` show console
+
+### MTK.Popup(parent)
