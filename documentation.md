@@ -13,12 +13,12 @@ I am using the Sun-Valley-ttk-theme: https://github.com/rdbende/Sun-Valley-ttk-t
 
 compatible with tkinter and tkinter.ttk widgets
 
-### MTK.Window(parent, blur=True, darktitlebar=True, \*args, \*\*kwargs)
+### MTK.Window(parent, blur=True, \*args, \*\*kwargs)
 Inherits from Tk()\
 Main window\
-blur and black title bar only compatible with Windows 11
+blur and black title bar only compatible with Windows 11\
 blur needs to be reenabled with window.reenable_blur() after running:
->window.resize(), window.overrideredirect
+>window.resize(), window.overrideredirect()
 
 ### MTK.Scrollframe(parent, bg=None, fg=None, show_scrollbar=False, *args, **kwargs)
 Inherits from ttk.Frame()\

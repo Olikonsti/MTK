@@ -1,7 +1,7 @@
 from MTK.GLOBAL import *
 
 class Window(Tk):
-    def __init__(self, blur=True, darktitlebar=True, *args, **kwargs):
+    def __init__(self, blur=True, *args, **kwargs):
         self.blur = blur
         super().__init__(*args, **kwargs)
         self.geometry("600x500")
