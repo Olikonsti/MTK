@@ -16,4 +16,6 @@ Main window
 
 #
 
-### MTK.Scrollframe()
+### MTK.Scrollframe(parent, bg=None, fg=None, show_scrollbar=False, *args, **kwargs)
+Inherits from ttk.Frame()\
+A Scrollframe Widget for Windows with mouse bindings and a optional scrollbar

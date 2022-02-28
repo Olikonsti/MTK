@@ -5,7 +5,7 @@ fp = functools.partial
 
 
 class Scrollframe(ttk.Frame):
-    def __init__(self, parent, show_scrollbar=False, *args, **kw):
+    def __init__(self, parent, bg=None, fg=None, show_scrollbar=False, *args, **kw):
         self.border_frame = ttk.Frame(parent)
         # track changes to the canvas and frame width and sync them,
         # also updating the scrollbar
