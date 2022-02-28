@@ -2,3 +2,4 @@ tkinter
 tkinter.ttk
 functools
 ctypes
+BlurWindow

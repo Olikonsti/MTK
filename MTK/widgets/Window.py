@@ -8,8 +8,7 @@ class Window(Tk):
         self.title("MTK_GUI")
         self.iconbitmap("MTK/theme/icon.ico")
 
-        if darktitlebar:
-            dark_title_bar(self)
+
 
         if blur:
             enable_blur(self, dark_mode=True)

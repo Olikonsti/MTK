@@ -3,7 +3,7 @@ import MTK
 f = MTK.Window()
 
 
-y = MTK.Button(f, text="teey")
+y = MTK.Button(f, text="YEET")
 y.pack(padx=100, pady=100)
 
 d = MTK.Scrollframe(f, show_scrollbar=False)

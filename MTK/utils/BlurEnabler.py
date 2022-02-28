@@ -8,7 +8,9 @@ def enable_blur(win, dark_mode=True):
     get_parent = ct.windll.user32.GetParent
     HWND = get_parent(win.winfo_id())
 
-    color = "#03020233"
+    #color = win["bg"]
+    color = "#080808"
+    #win.attributes("-transparentcolor", win["bg"])
 
     DRAG = False
 
