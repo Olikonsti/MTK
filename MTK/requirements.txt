@@ -1,0 +1,4 @@
+tkinter
+tkinter.ttk
+functools
+ctypes
