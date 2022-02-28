@@ -11,8 +11,6 @@ I am using the Sun-Valley-ttk-theme: https://github.com/rdbende/Sun-Valley-ttk-t
 
 # Widgets
 
-#
-
 compatible with tkinter and tkinter.ttk widgets\
 
 ### MTK.Window(parent, blur=True, darktitlebar=True, \*args, \*\*kwargs)
