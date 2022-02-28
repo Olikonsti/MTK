@@ -7,7 +7,7 @@ class Window(Tk):
         self.geometry("600x500")
         self.tk.call("source", "MTK/sun-valley.tcl")
         self.tk.call("set_theme", "dark")
-        self.title("MTK_GUI")
+        self.title("MTK GUI")
         self.iconbitmap("MTK/theme/icon.ico")
 
         if blur:
