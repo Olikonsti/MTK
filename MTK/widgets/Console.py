@@ -4,12 +4,13 @@ import MTK
 from MTK.GLOBAL import *
 from MTK.widgets.Window import *
 from MTK.widgets.Scrollframe import *
-from MTK.widgets.Emptywindow import *
 from MTK.widgets.Popup import *
 
 class Console(Window):
-    def __init__(self, minimized=True, disable_exec=False):
-        super().__init__(blur=False)
+    def __init__(self, title="MTK Console", minimized=True, disable_exec=False):
+        super().__init__(blur=True)
+        if minimized:
+            self.hide()
         self.update()
         self.geometry("800x560")
         self.minimized = minimized
@@ -20,11 +21,10 @@ class Console(Window):
         menubar.add_cascade(label="Options", menu=_menu)
         self.update()
         self.log_list = []
-        if minimized:
-            self.hide()
+
         self.update()
 
-        self.title("MTK Console")
+        self.title(title)
         self.scrollarea = Scrollframe(self, show_scrollbar=True)
         self.scrollarea.pack(expand=True, fill=BOTH)
         self.bottom_frame = Frame(self)
@@ -53,7 +53,7 @@ class Console(Window):
             text += f"{i}\n"
         f.write(text)
         f.close()
-        Popup(self)
+        Popup(self, title="Info", text="File saved")
 
     def run(self):
         try:

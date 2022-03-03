@@ -5,7 +5,7 @@ f = MTK.Window()
 d = MTK.Console(minimized=True, disable_exec=True)
 
 for i in range(100):
-    d.log("YEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEETYEET", color="red")
+    d.log("TestMessage", color="green")
 
 
 y = MTK.Button(f, text="open console", command=d.show)
@@ -14,7 +14,17 @@ y.pack(padx=100, pady=100)
 d = MTK.Scrollframe(f, show_scrollbar=True)
 d.pack()
 
+def op_m():
+    m = MTK.Menu(f, text="MAIN",
+                 menus=[
+                     MTK.Menu(f, text="YEET!", command=lambda: print("yeee"))
+                 ]
+            )
+    m.open()
+
 for i in range(50):
-    MTK.Button(d, text="YEEE", command=lambda: MTK.Popup(f)).pack(padx=1, pady=1)
+    MTK.Button(d, text="YEEE", command=op_m).pack(padx=1, pady=1)
+
+
 
 f.mainloop()
