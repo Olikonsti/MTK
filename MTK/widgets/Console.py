@@ -8,12 +8,12 @@ from MTK.widgets.Popup import *
 
 class Console(Window):
     def __init__(self, title="MTK Console", minimized=True, disable_exec=False):
-        super().__init__(blur=True)
-        if minimized:
-            self.hide()
+        super().__init__(blur=True, start_hidden=minimized)
         self.update()
         self.geometry("800x560")
         self.minimized = minimized
+        if minimized:
+            self.hide()
         menubar = Menu(self)
         self.config(menu=menubar)
         _menu = Menu(menubar)
@@ -93,7 +93,10 @@ class Console(Window):
         self.icon = icon
 
     def show(self, icon=None):
-        self.icon.stop()
+        try:
+            self.icon.stop()
+        except:
+            pass
         self.minimized = False
         self.deiconify()
         self.overrideredirect(False)

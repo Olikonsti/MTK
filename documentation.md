@@ -13,7 +13,7 @@ I am using the Sun-Valley-ttk-theme: https://github.com/rdbende/Sun-Valley-ttk-t
 
 compatible with tkinter and tkinter.ttk widgets
 
-### MTK.Window(blur=True, empty=False \*args, \*\*kwargs)
+### MTK.Window(blur=True, empty=False, start_hidden=False, \*args, \*\*kwargs)
 Inherits from Tk()\
 empty=True removes title bar\
 Main window\

@@ -17,7 +17,17 @@ d.pack()
 def op_m():
     m = MTK.Menu(f, text="MAIN",
                  menus=[
-                     MTK.Menu(f, text="YEET!", command=lambda: print("yeee"))
+                     MTK.Menu(f, text="YEET!", command=lambda: print("yeee")),
+                     MTK.Menu(f, text="YEET!", command=lambda: print("yeee2")),
+                     MTK.Menu(f, text="MENU!", menus=
+                                    [
+                                        MTK.Menu(f, text="YT!", command=lambda: print("yeee3")),
+                                        MTK.Menu(f, text="YT!", menus=
+                                                 [
+                                                     MTK.Menu(f, text="YT!", command=lambda: print("yeee3")),
+                                                 ]),
+                                    ]
+                              )
                  ]
             )
     m.open()

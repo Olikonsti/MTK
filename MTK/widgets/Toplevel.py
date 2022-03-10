@@ -10,6 +10,7 @@ class Toplevel(Toplevel):
 
         if empty:
             self.overrideredirect(True)
+            decorate_corners(self)
 
 
         self.title("MTK GUI")
@@ -17,7 +18,7 @@ class Toplevel(Toplevel):
 
         if blur:
             enable_blur(self, dark_mode=True)
-        decorate_corners(self)
+
 
     def reenable_blur(self):
         if self.blur:
