@@ -1,4 +1,5 @@
 from MTK.GLOBAL import *
+from MTK.utils.decoreate_corners import *
 
 class Toplevel(Toplevel):
     def __init__(self, parent, blur=True, empty=False, *args, **kwargs):
@@ -16,6 +17,7 @@ class Toplevel(Toplevel):
 
         if blur:
             enable_blur(self, dark_mode=True)
+        decorate_corners(self)
 
     def reenable_blur(self):
         if self.blur:

@@ -29,14 +29,9 @@ class Menu(Toplevel):
         self.bind("<Button-1>", self.update_task)
 
     def open(self):
-        self.grab_set()
         x = self.window.winfo_pointerx()
         y = self.window.winfo_pointery()
-        #x = x + self.window.winfo_x()
-        #y = y + self.window.winfo_y()
-        self.geometry(f"{self.width}x{self.height}+{x}+{y}")
-        self.bounds = [x, y, x+self.width, y+self.height]
-        self.bind("<Button-1>", self.update_task)
+        self.openat(x, y)
 
     def update_task(self, event=None):
         if self.window.winfo_pointerx() < self.bounds[0] or self.window.winfo_pointerx() > self.bounds[2]:
